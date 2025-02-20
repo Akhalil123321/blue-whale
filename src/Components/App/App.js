@@ -6,7 +6,7 @@ import Main from '../../Routes/Main/Main';
 
 function App() {
   return (
-    <div>
+    <div className='app-cont'>
       <NavBar/>
         <Routes>
           <Route path="/" element={<Main/>} />

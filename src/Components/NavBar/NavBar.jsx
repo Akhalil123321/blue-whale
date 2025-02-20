@@ -3,8 +3,8 @@ import "./NavBar.css"
 
 const NavBar = () => {
   return (
-    <div>
-      
+    <div className='nav-cont'>
+      Ahmed
     </div>
   )
 }
