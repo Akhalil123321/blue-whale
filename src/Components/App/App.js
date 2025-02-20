@@ -1,17 +1,20 @@
-import logo from '../../Images/BLUE WHALE.png';
-import './App.css';
+import React from 'react';
+import NavBar from '../../Components/NavBar/NavBar';
+import './App.css'
+import { Route, Routes } from 'react-router-dom';
+import Main from '../../Routes/Main/Main';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          COMMING SOON...
-        </h1>
-      </header>
-    </div>
+    <div>
+      <NavBar/>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+          <Route path="Main" element={<Main/>} />
+        </Routes>
+  </div>
   );
 }
 
 export default App;
+
