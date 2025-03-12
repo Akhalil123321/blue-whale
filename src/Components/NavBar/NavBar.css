@@ -1,9 +1,79 @@
-.nav-cont{
+.nav-cont {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav-cont-chi{
   display: flex;
-  flex-direction: row;
-  width:100%;
-  height: 100px;
-  background-color:rgba(151, 146, 146,.2);
+  height: 7rem;
+  padding: 15px 50px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  background-color: var(--nav-background-dark);
+  color: var(--nav-text-light);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.Nav-Logo {
+  width: 6rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--nav-hover-color);
+}
+
+/* زرار Call to Action */
+.nav-button {
+  background-color: var(--primary-color);
+  color: var(--nav-background-dark);
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background-color: var(--nav-hover-color);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .nav-links {
+      flex-direction: column;
+      padding: 10px 0;
+  }
+
+  .nav-button {
+      margin-top: 10px;
+  }
 }
