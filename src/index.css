@@ -43,11 +43,13 @@ body {
   --primary-color: #df9925;
   --secondary-color: #4e4e4e;
   --background-color: #f4f4f4;
+  --sec-background: #1a1a1a;
   --highlight-color: #ffcc00;
   --text-color: #333333;
   --nav-hover-color: #ffcc00;
   --nav-background-dark: rgba(34, 34, 34,.7);
   --nav-text-light: #ffffff;
+
 }
 body {
   background-color: var(--background-color);
@@ -58,17 +60,14 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
-h1, h2, h3 {
-  color: var(--primary-color);
-}
-a {
+.a-general-format {
   color: var(--primary-color);
   text-decoration: none;
 }
-a:hover {
+.a-general-format:hover {
   color: var(--highlight-color);
 }
-button {
+.btn-general-format {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -76,7 +75,7 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-button:hover {
+.btn-general-format:hover {
   background-color: var(--highlight-color);
 }
 .gradient-bg {

@@ -9,12 +9,12 @@ const NavBar = () => {
       <div className='nav-cont-chi'>
         <img className="Nav-Logo" src={logo} alt="" />
         <ul className="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a className='a-general-format' href="#">Home</a></li>
+            <li><a className='a-general-format' href="#">About</a></li>
+            <li><a className='a-general-format' href="#">Services</a></li>
+            <li><a className='a-general-format' href="#">Contact</a></li>
         </ul>
-        <button className="nav-button">Get Started</button>
+        <button className="nav-button">CONTACT US</button>
       </div>
     </nav>
   )
