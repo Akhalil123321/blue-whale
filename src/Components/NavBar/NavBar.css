@@ -45,7 +45,7 @@
 }
 
 /* زرار Call to Action */
-.nav-button {
+/* .nav-button {
   background-color: var(--primary-color);
   color: var(--nav-background-dark);
   padding: 10px 20px;
@@ -59,7 +59,37 @@
 
 .nav-button:hover {
   background-color: var(--nav-hover-color);
+} */
+.nav-button {
+  margin: 0.625rem;
+  padding: .7rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  background-size: 200% auto;
+  background-image: linear-gradient(45deg, #df9925 0%, #b3741a 51%, #df9925 100%);
+  border-radius: 0.625rem;
+  border: none;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0 0 0.875rem -0.5rem #df9925;
 }
+
+.nav-button:hover {
+  background-position: right center;
+  filter: brightness(1.1);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
 
 /* تصميم متجاوب */
 @media (max-width: 768px) {

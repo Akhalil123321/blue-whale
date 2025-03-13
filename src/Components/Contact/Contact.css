@@ -1,7 +1,226 @@
-.Contact-cont{
+/* General Styling */
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  margin-bottom:3.875rem;
+}
+
+.contact-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: #df9925;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-title::after {
+  content: "";
+  width: 3.75rem;
+  height: 0.25rem;
+  background: #df9925;
+  position: absolute;
+  bottom: -0.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.3125rem;
+}
+
+/* Sections */
+.contact-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.875rem;
+  width: 100%;
+  max-width: 75rem;
+}
+
+/* Contact Info & Methods */
+.contact-info, .contact-methods {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  min-width: 25rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding:1.875rem;
+  border-radius: 0.9375rem;
+  backdrop-filter: blur(0.625rem);
+}
+
+/* Contact Items */
+.contact-item {
+  margin-bottom: 1.25rem;
+}
+
+.contact-label {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #df9925;
+  margin-bottom: 0.5rem;
+}
+
+.contact-text, .contact-link {
+  font-size: 1rem;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #df9925;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.social-icon {
+  font-size: 1.375rem;
+  color: #df9925;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffb347;
+  transform: scale(1.2);
+}
+
+/* Inquiry Button */
+/* .request-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  background: #df9925;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.request-button:hover {
+  background: #ffb347;
+  transform: translateY(-0.125rem);
+} */
+
+/* Location Section */
+.contact-location {
+  text-align: center;
+  margin-top: 1.875rem;
+  width: 100%;
+}
+
+.contact-location .contact-link {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #df9925;
+  text-decoration: none;
+}
+
+.contact-location .contact-link:hover {
+  color: #ffb347;
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+  .contact-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .contact-methods {
+    width: 90%;
+  }
+}
+
+.request-button {
+  all: unset;
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  background: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0.325rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.request-button::after,
+.request-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: all .4s ease-in-out;
+}
+
+.request-button::before {
   width: 100%;
   height: 100%;
+  background: linear-gradient(135deg, #df9925, #b3741a);
+  border-radius: 0.625rem;
 }
-.contact-cont-child1{
-  padding: 50px 50px;
+
+.request-button::after {
+  transform: translate(10px, 10px);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 50px;
 }
+
+.request-button:hover::before {
+  transform: translate(3%, 10%);
+  filter: brightness(1.1);
+}
+
+.request-button:hover::after {
+  border-radius: 0.625rem;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.request-button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
