@@ -1,7 +1,54 @@
-.hero-cont{
+.video-back-head{
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  box-shadow: 2px 1px 62px 66px rgba(0,0,0,0.56) inset;
+  -webkit-box-shadow: 2px 1px 62px 66px rgba(0,0,0,0.56) inset;
+  -moz-box-shadow: 2px 1px 62px 66px rgba(0,0,0,0.56) inset;
+}
+.video-back{
   width: 100%;
   height: 100%;
-  background: url("../../Images/hero-back.jpg") no-repeat center center fixed;
-  background-size: cover;
-  filter: blur(.8px);
+  object-fit: cover;
+  z-index: -1;
+  overflow: hidden;
+
+}
+.video-Shadow1{
+  background-color: var(--Backgroundcolor);
+  width: 100%;
+  height: .1rem;
+  position: absolute;
+  bottom: -2.5rem;
+  box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
+  -webkit-box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
+  -moz-box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
+  overflow: hidden;
+}
+.video-Shadow2{
+  background-color: var(--Backgroundcolor);
+  width: 100%;
+  height: .1rem;
+  position: absolute;
+  top: -1.9rem;
+  box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
+  -webkit-box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
+  -moz-box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
+  overflow: hidden;
+}
+.video-Shadow3{
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .5;
+  box-shadow: 0px 0px 400px 46px var(--Backgroundcolor) inset;
+  -webkit-box-shadow: 0px 0px 400px 46px var(--Backgroundcolor) inset;
+  -moz-box-shadow: 0px 0px 400px 46px var(--Backgroundcolor) inset;
+  overflow: hidden;
 }
