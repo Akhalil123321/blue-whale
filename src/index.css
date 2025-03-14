@@ -49,6 +49,14 @@ body {
   --nav-hover-color: #ffcc00;
   --nav-background-dark: rgba(34, 34, 34,.7);
   --nav-text-light: #ffffff;
+  --popup-primary-color: #F09819;
+  --popup-secondary-color: #FF512F;
+  --popup-text-color: #ffffff;
+  --popup-bg-color: rgba(34, 34, 34,.8); 
+  --popup-input-bg: #222;
+  --popup-input-border: #444;
+  --popup-highlight-color: #e9b635;
+  --Backgroundcolor: rgb(26, 26, 26);
 
 }
 body {

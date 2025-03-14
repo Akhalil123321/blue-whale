@@ -2,10 +2,13 @@
 import React from 'react'
 import { BiLogoLinkedin } from "react-icons/bi";
 import { AiOutlineYoutube } from "react-icons/ai";
-import './Contact.css'
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { useFiles } from '../../Components/Context/FilesContext';
+import './Contact.css'
 
 const Contact = () => {
+  const { toggleInquiry } = useFiles();
+    const closeMenu = () => toggleInquiry(false);
   return (
     <div className='contact-container'>
       <div className='contact-header'>
@@ -42,7 +45,7 @@ const Contact = () => {
 
           {/* Inquiry Button */}
           <div className='contact-item'>
-            <button className='request-button'>CONTACT US</button>
+            <button className='request-button' onClick={closeMenu}>CONTACT US</button>
           </div>
         </div>
       </div>

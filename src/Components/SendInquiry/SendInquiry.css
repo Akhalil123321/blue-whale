@@ -1,0 +1,132 @@
+.send-inquiry-cont-open, .send-inquiry-cont-close {
+  position: fixed;
+  font-family: 'Poppins', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.send-inquiry-cont-close {
+  display: none;
+}
+.send-inquiry-cont-open {
+  display: flex;
+}
+
+.blur-back {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.send-inquiry-cont-ch {
+  z-index: 20;
+  position: relative;
+  width: 50%;
+  max-width: 600px;
+  background: var(--popup-bg-color);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 81, 47, 0.2);
+}
+
+.inquiry-form-left {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* .inquiry-form-left-img {
+  width: 10%;
+  max-width: 250px;
+} */
+
+.inquiry-form-right-title {
+  font-size: 1.8rem;
+  color: var(--popup-highlight-color);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.inquiry-form-right-field {
+  display: flex;
+  align-items: center;
+  background: var(--popup-input-bg);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border: 1px solid var(--popup-input-border);
+}
+
+.inquiry-form-right-icon {
+  font-size: 1.4rem;
+  color: var(--popup-highlight-color);
+  margin-right: 10px;
+}
+
+.inquiry-form-right-input,
+.inquiry-form-right-textarea {
+  width: 100%;
+  font-size: 1rem;
+  color: var(--popup-text-color);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.inquiry-form-right-textarea {
+  resize: none;
+  height: 100px;
+}
+
+.inquiry-form-right-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--popup-text-color);
+  background: linear-gradient(45deg, var(--popup-primary-color), var(--popup-secondary-color));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inquiry-form-right-button:hover {
+  background: linear-gradient(45deg, var(--popup-secondary-color), var(--popup-primary-color));
+}
+
+.menu-close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: var(--popup-text-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-close-icon:hover {
+  color: var(--popup-highlight-color);
+}
+
+@media screen and (max-width: 768px) {
+  .send-inquiry-cont-ch {
+    width: 80%;
+    padding: 2rem;
+  }
+  .inquiry-form-right-title {
+    font-size: 1.5rem;
+  }
+  .inquiry-form-right-button {
+    font-size: 1rem;
+  }
+}
