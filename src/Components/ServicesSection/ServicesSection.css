@@ -1,0 +1,49 @@
+.services-section {
+  background-color: var(--Backgroundcolor);
+  padding: 5rem 2rem;
+  color: var(--nav-text-light);
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background-color: var(--sec-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 0 10px rgba(223, 153, 37, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(223, 153, 37, 0.3);
+}
+
+.service-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #d1d1d1;
+  line-height: 1.6;
+}

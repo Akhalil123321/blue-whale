@@ -33,12 +33,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.root{
-  width: 100%;
+  background-color: var(--sec-background);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
+
 :root {
   --primary-color: #df9925;
   --secondary-color: #4e4e4e;
@@ -57,16 +60,6 @@ body {
   --popup-input-border: #444;
   --popup-highlight-color: #e9b635;
   --Backgroundcolor: rgb(26, 26, 26);
-
-}
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  overflow-x: hidden;
 }
 .a-general-format {
   color: var(--primary-color);
