@@ -1,54 +1,85 @@
-.video-back-head{
-  width: 100%;
-  height: 110vh;
-  display: flex;
-  overflow: hidden;
-  z-index: -1;
+.hero-section {
   position: relative;
-  box-shadow: 2px 1px 62px 66px rgba(0,0,0,0.56) inset;
-  -webkit-box-shadow: 2px 1px 62px 66px rgba(0,0,0,0.56) inset;
-  -moz-box-shadow: 2px 1px 62px 66px rgba(0,0,0,0.56) inset;
-}
-.video-back{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  min-height: 100vh;
+  background: url('/src/Images/pic/14.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+}
 
-}
-.video-Shadow1{
-  background-color: var(--Backgroundcolor);
-  width: 100%;
-  height: .1rem;
+.hero-overlay {
   position: absolute;
-  bottom: -2.5rem;
-  box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
-  -webkit-box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
-  -moz-box-shadow: 0px -55px 74px 74px var(--Backgroundcolor);
-  overflow: hidden;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.video-Shadow2{
-  background-color: var(--Backgroundcolor);
-  width: 100%;
-  height: .1rem;
-  position: absolute;
-  top: -1.9rem;
-  box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
-  -webkit-box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
-  -moz-box-shadow: 0px 55px 74px 74px var(--Backgroundcolor);
-  overflow: hidden;
+
+.hero-content {
+  z-index: 2;
+  text-align: center;
+  color: var(--nav-text-light);
+  padding: 2rem;
+  animation: fadeInUp 1.2s ease-out both;
 }
-.video-Shadow3{
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: .5;
-  box-shadow: 0px 0px 400px 46px var(--Backgroundcolor) inset;
-  -webkit-box-shadow: 0px 0px 400px 46px var(--Backgroundcolor) inset;
-  -moz-box-shadow: 0px 0px 400px 46px var(--Backgroundcolor) inset;
-  overflow: hidden;
+
+.hero-title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #eee;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/*button */
+.hero-button {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: var(--primary-color);
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.hero-button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

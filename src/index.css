@@ -24,7 +24,6 @@
   background: linear-gradient(45deg, #ffb347, #df9925);
   border: 2px solid #2a2a2a;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -41,7 +40,11 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
-
+#root{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 :root {
   --primary-color: #df9925;
   --secondary-color: #4e4e4e;
@@ -82,4 +85,7 @@ body {
 .gradient-bg {
   background: linear-gradient(135deg, #df9925, #ffcc00);
   padding: 100px 0;
+}
+.Full-Project-Cont{
+  width: 100vw;
 }

@@ -1,7 +1,7 @@
 .about-us-section {
   background-color: var(--Backgroundcolor);
   color: var(--text-color);
-  padding: 4rem 2rem;
+  padding: 4rem 5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
