@@ -92,7 +92,6 @@
   color: var(--nav-hover-color);
 }
 
-/* زرار Call to Action */
 /* .nav-button {
   background-color: var(--primary-color);
   color: var(--nav-background-dark);
@@ -154,4 +153,62 @@
   .nav-button {
       margin-top: 10px;
   }
+}
+@media (max-width: 750px) {
+.nav-cont-chi-sc-f,.nav-cont-chi-sc-t{
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  border-radius: 5rem;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  transition-duration: .5s;
+}
+.Nav-Logo-t, .Nav-Logo-f {
+  height: 3rem;
+  margin: auto
+}
+.logo-clicker-t, .logo-clicker-f{
+  display: flex;
+  left: 0;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(227, 158, 48, 0.2);
+  transition-duration: .5s;
+}
+.nav-links-f, .nav-links-t{
+  display: none;
+}
+.nav-button-t, .nav-button-f{
+  display: none;
+}
+}
+@media (max-width: 480px) {
+  .nav-cont-chi-sc-f,.nav-cont-chi-sc-t{
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  border-radius: 5rem;
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  transition-duration: .5s;
+}
+.Nav-Logo-t, .Nav-Logo-f {
+  height: 1.6rem;
+  margin: auto
+}
+.logo-clicker-t, .logo-clicker-f{
+  display: flex;
+  left: 0;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(227, 158, 48, 0.2);
+  transition-duration: .5s;
+}
 }

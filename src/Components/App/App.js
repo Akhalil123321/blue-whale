@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import SendInquiry from "../SendInquiry/SendInquiry"
 import Main from '../../Routes/Main/Main';
 import NavBar from '../../Components/NavBar/NavBar';
+import ProjectPage from '../../Routes/Project/Project'
+import OurProjects from '../../Routes/OurProjects/OurProjects'
 import './App.css'
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Main/>} />
             <Route path="Main" element={<Main/>} />
+            <Route path="/project/:id" element={<ProjectPage/>} />
+            <Route path="OurProjects" element={<OurProjects/>} />
           </Routes>
       </FilesContextProvider>
   );

@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5ffb41c.css",
-    "main.js": "/static/js/main.8738af18.js",
-    "static/media/BLUE WHALE.png": "/static/media/BLUE WHALE.3a4240f0004b73b966d6.png",
+    "main.css": "/static/css/main.ac67538e.css",
+    "main.js": "/static/js/main.ba39f7a4.js",
+    "static/media/pic9.jpg": "/static/media/pic9.530ce5f9b5cb19e139d1.jpg",
+    "static/media/17.png": "/static/media/17.c09b48ad43b2875be758.png",
+    "static/media/Logo Part 1.png": "/static/media/Logo Part 1.85e830cf60006e2ff2a0.png",
+    "static/media/14.jpg": "/static/media/14.382c3b824ff75cdec6db.jpg",
     "index.html": "/index.html",
-    "main.b5ffb41c.css.map": "/static/css/main.b5ffb41c.css.map",
-    "main.8738af18.js.map": "/static/js/main.8738af18.js.map"
+    "main.ac67538e.css.map": "/static/css/main.ac67538e.css.map",
+    "main.ba39f7a4.js.map": "/static/js/main.ba39f7a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5ffb41c.css",
-    "static/js/main.8738af18.js"
+    "static/css/main.ac67538e.css",
+    "static/js/main.ba39f7a4.js"
   ]
 }

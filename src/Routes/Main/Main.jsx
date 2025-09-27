@@ -6,6 +6,7 @@ import ServicesSection from "../../Components/ServicesSection/ServicesSection"
 import Contact from "../../Components/Contact/Contact"
 import OurVision from "../../Components/OurVision/OurVision"
 import WhyChooseUs from "../../Components/WhyChooseUs/WhyChooseUs"
+import MainProjects from "../../Components/MainProjects/MainProjects"
 import Tail from "../../Components/Tail/Tail"
 
 const MainEn = () => {
@@ -21,6 +22,7 @@ const MainEn = () => {
             <SectionDevider/>
             <ServicesSection/>
             <SectionDevider/>
+            <MainProjects/>
             <Contact/>
             <Tail/>
         </div>

@@ -1,0 +1,23 @@
+.op-container{
+margin: 10rem 5rem;
+display: flex;
+align-items: center;
+box-sizing: border-box;
+gap: 3%;
+}
+.op-projects{
+  width: 30%;
+  height: 20rem;
+  border: 3px solid rgb(193, 162, 6);
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.op-projects:link,
+.op-projects:visited,
+.op-projects:hover,
+.op-projects:active {
+  text-decoration: none;
+}

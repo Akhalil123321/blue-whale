@@ -3,13 +3,23 @@
   text-align: center;
   padding: 1rem;
   background: #1a1a1a;
-  color: #df9925;
+  color: var(--offWhite);
   font-size: 1rem;
   font-weight: 500;
-  border-top: 2px solid #b3741a;
+  border-top: 2px solid var(--border-color);
+  box-sizing: border-box;
 }
 
 .copyright {
   margin: 0;
   opacity: 0.8;
+  word-wrap: break-word;
+}
+
+/* Optional: smaller text on very small screens */
+@media (max-width: 480px) {
+  .footer {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
 }

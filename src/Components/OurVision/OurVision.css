@@ -1,4 +1,4 @@
-
+/* الكود الأساسي كما هو */
 .our-vision {
   background: linear-gradient(
       rgba(0, 0, 0, 0.65),
@@ -33,6 +33,7 @@
   opacity: 1;
   transform: translateY(0);
 }
+
 .our-vision h2 {
   font-size: 40px;
   color: var(--primary-color);
@@ -46,7 +47,8 @@
   transform: scale(1.05);
 }
 
-.intro, .details {
+.intro,
+.details {
   font-size: 18px;
   line-height: 1.7;
   color: #eaeaea;
@@ -64,28 +66,64 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin: 0.625rem;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1rem;
   font-weight: 700;
-  color: rgb(0, 0, 0);
   background-size: 200% auto;
   background-image: linear-gradient(45deg, #df9925 0%, #b3741a 51%, #df9925 100%);
   border-radius: 0.625rem;
-  border: none;
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
+  box-shadow: 0 0 0.875rem -0.5rem #df9925;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  box-shadow: 0 0 0.875rem -0.5rem #df9925;
+    transition: .5s;
 }
-.cta-button:hover{
+
+.cta-button:hover {
   background-position: right center;
   filter: brightness(1.1);
-  }
-.cta-button:hover {
-  background-color: #e0b400;
   transform: translateY(-3px) scale(1.05);
+  transition: .5s;
+}
+
+/* ✅ ميديا كويري لتحسين الـ responsive */
+@media screen and (max-width: 768px) {
+  .our-vision {
+    padding: 60px 15px;
+  }
+
+  .our-vision h2 {
+    font-size: 28px;
+  }
+
+  .intro,
+  .details {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .our-vision {
+    padding: 50px 10px;
+  }
+
+  .our-vision h2 {
+    font-size: 24px;
+  }
+
+  .intro,
+  .details {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+  }
 }

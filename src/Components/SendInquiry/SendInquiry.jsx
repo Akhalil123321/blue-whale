@@ -50,7 +50,7 @@ const SendInquiry = () => {
         className='blur-back' 
         initial={{ opacity: -2 }}
         whileInView={{ opacity: 1 }}
-        transition={{ type: 'spring', duration: 1, delay: 0 }}
+        transition={{ type: 'spring', duration: 1, delay: 0 }} 
       ></motion.div>
     </div>
   );
