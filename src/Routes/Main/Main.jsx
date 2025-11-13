@@ -1,28 +1,22 @@
 import React from "react"
-import SectionDevider from "../../Components/SectionDivider/SectionDivider"
-import Hero from "../../Components/Hero/Hero"
-import AboutUs from "../../Components/AboutUS/AboutUs"
-import ServicesSection from "../../Components/ServicesSection/ServicesSection"
-import Contact from "../../Components/Contact/Contact"
-import OurVision from "../../Components/OurVision/OurVision"
-import WhyChooseUs from "../../Components/WhyChooseUs/WhyChooseUs"
-import MainProjects from "../../Components/MainProjects/MainProjects"
-import Tail from "../../Components/Tail/Tail"
+import Hero from "../../Components/2-Hero/Hero"
+import AboutUs from "../../Components/3-AboutUS/AboutUs"
+import ServicesSection from "../../Components/6-ServicesSection/ServicesSection"
+import Contact from "../../Components/8-Contact/Contact"
+import OurVision from "../../Components/5-OurVision/OurVision"
+import WhyChooseUs from "../../Components/4-Services/Services"
+import OurProjects from "../../Components/7-OurProjects/OurProjects"
+import Tail from "../../Components/9-Tail/Tail"
 
 const MainEn = () => {
     return (
         <div className="Full-Project-Cont">
             <Hero/>
-            <SectionDevider/>
             <AboutUs/>
-            <SectionDevider/>
-            <OurVision/>
-            <SectionDevider/>
             <WhyChooseUs/>
-            <SectionDevider/>
+            <OurVision/>
+            <OurProjects/>
             <ServicesSection/>
-            <SectionDevider/>
-            <MainProjects/>
             <Contact/>
             <Tail/>
         </div>

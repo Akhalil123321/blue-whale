@@ -1,8 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins',sans-serif;
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+html {
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -28,9 +32,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--sec-background);
@@ -49,15 +50,16 @@ body {
 
 }
 :root {
-  --primary-color: #df9925;
-  --secondary-color: #4e4e4e;
+  --color-gold: #DF9925;
+  --color-dark: #333333;
+  --color-light: #F6F6F6;
+  --color-text: #7A7A7A;
+  --color-white: #FFFFFF;
+  --nav-background-dark: rgba(34, 34, 34,.7);
   --border-color: #b3741a;
-  --background-color: #f4f4f4;
   --sec-background: #1a1a1a;
   --highlight-color: #ffcc00;
-  --text-color: #333333;
   --nav-hover-color: #ffcc00;
-  --nav-background-dark: rgba(34, 34, 34,.7);
   --nav-text-light: #ffffff;
   --offWhite: #f7f7f7;
   --popup-primary-color: #F09819;
@@ -93,4 +95,9 @@ body {
 }
 .Full-Project-Cont{
   width: 100vw;
+}
+.golden-text-title{
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 900;
 }

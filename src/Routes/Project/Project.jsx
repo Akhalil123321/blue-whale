@@ -47,10 +47,10 @@ export default function Project() {
         <div className="single-room-info">
           <h3 className="single-room-info-h">Information:</h3>
           <p className="single-room-info-p">Price : {project.price} $</p>
-          <p className="single-room-info-p">Size : {project.size} SQFT</p>
-          <p className="single-room-info-p">Room Numbers : {project.Guests}</p>
+          <p className="single-room-info-p">Location : {project.size} </p>
+          {/* <p className="single-room-info-p">Room Numbers : {project.Guests}</p> */}
           <p className="single-room-info-p">
-            {project.Pets ? "1 Parking" : "2 Parking"}
+            {/* {project.Pets ? "1 Parking" : "2 Parking"} */}
           </p>
         </div>
       </div>

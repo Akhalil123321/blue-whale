@@ -1,0 +1,129 @@
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
+import { useFiles } from "../../Components/Context/FilesContext";
+import "./Contact.css";
+
+const contactCards = [
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    value: "+971 2 442 1016",
+    link: "tel:+97124421016",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "E-Mail",
+    value: "info@bluewhaledevelopment.com",
+    link: "mailto:info@bluewhaledevelopment.com",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Location",
+    value: "Shining Towers, Khalidiyah, Floor 25, Office 2502",
+    link: "https://maps.app.goo.gl/AwMBKKyiNEbFfs2A8",
+  },
+];
+
+const socials = [
+  { icon: <FaFacebookF />, link: "#" },
+  { icon: <FaLinkedinIn />, link: "#" },
+  { icon: <FaInstagram />, link: "https://www.instagram.com" },
+  { icon: <FaWhatsapp />, link: "https://api.whatsapp.com/send?phone=971507890780" },
+  { icon: <FaYoutube />, link: "#" },
+];
+
+const scrollAnim = {
+  hidden: { opacity: 0, y: 80, filter: "blur(12px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.9,
+    },
+  },
+};
+
+
+const Contact = () => {
+  const { toggleInquiry } = useFiles();
+
+  return (
+    <section className="contact-wrapper no-bg">
+
+      {/* TITLE */}
+      <motion.h2
+        className="section-title"
+        variants={scrollAnim}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        Get In Touch
+      </motion.h2>
+
+      {/* CARDS */}
+      <div className="contact-cards">
+        {contactCards.map((card, i) => (
+          <motion.div
+            key={i}
+            className="contact-card"
+            variants={scrollAnim}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ delay: i * 0.15 }}
+          >
+            <div className="contact-icon">{card.icon}</div>
+            <h3>{card.title}</h3>
+
+            <a href={card.link} target="_blank" rel="noopener noreferrer">
+              {card.value}
+            </a>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* SOCIALS */}
+      <motion.div
+        className="contact-socials"
+        variants={scrollAnim}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ delay: 0.4 }}
+      >
+        {socials.map((s, i) => (
+          <a key={i} href={s.link} target="_blank" rel="noopener noreferrer">
+            {s.icon}
+          </a>
+        ))}
+      </motion.div>
+
+      {/* BUTTON */}
+      <motion.button
+        className="contact-btn"
+        onClick={() => toggleInquiry(true)}
+        variants={scrollAnim}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ delay: 0.55 }}
+      >
+        CONTACT US
+      </motion.button>
+    </section>
+  );
+};
+
+export default Contact;

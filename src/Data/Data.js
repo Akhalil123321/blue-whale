@@ -1,14 +1,20 @@
 import blank from '../Images/Blank.png'
+import Project1Cover from '../Images/project1-cover.jpg'
+import Project2Cover from '../Images/project2-cover.jpg'
+import Project3Cover from '../Images/project3-cover.jpg'
+import Project3Det1 from '../Images/Project3Det1.jpg'
+import Project3Det2 from '../Images/Project3Det2.jpg'
+import Project3Det3 from '../Images/Project3Det3.jpg'
 
 const projects = [
   {
     id: 1,
-    image: blank,
+    image: Project1Cover,
     image1: blank,
     image2: blank,
     image3: blank,
-    ProjectName: 'Project 1',
-    ProjectSlogan: 'Project Slogan',
+    ProjectName: 'Bluewhale Pearl',
+    ProjectSlogan: 'Where Luxury Shines Brighter',
     size: '200',
     ditailes: `Lorem ipsum Lorem ipsum Lorem ipsum ...`,
     price: '1,2000,000.00',
@@ -26,12 +32,12 @@ const projects = [
   },
   {
     id: 2,
-    image: blank,
+    image: Project2Cover,
     image1: blank,
     image2: blank,
     image3: blank,
-    ProjectName: 'Project 2',
-    ProjectSlogan: 'Project Slogan',
+    ProjectName: 'Bluewhale Edge',
+    ProjectSlogan: 'Where Design Meets Bold Living',
     size: '300',
     ditailes: `Lorem ipsum Lorem ipsum Lorem ipsum ...`,
     price: '2,500,000.00',
@@ -49,15 +55,15 @@ const projects = [
   },
   {
     id: 3,
-    image: blank,
-    image1: blank,
-    image2: blank,
-    image3: blank,
-    ProjectName: 'Project 3',
-    ProjectSlogan: 'Project Slogan',
-    size: '250',
+    image: Project3Cover,
+    image1: Project3Det1,
+    image2: Project3Det2,
+    image3: Project3Det3,
+    ProjectName: 'Bluewhale Haven',
+    ProjectSlogan: 'Your Quiet Escape in the Heart of the City',
+    size: '',
     ditailes: `Lorem ipsum Lorem ipsum Lorem ipsum ...`,
-    price: '3,200,000.00',
+    price: '1 Billion',
     Guests: 3,
     Pets: false,
     RoomsType: 'suite',
