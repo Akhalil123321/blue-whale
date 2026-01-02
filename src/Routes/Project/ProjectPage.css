@@ -1,0 +1,171 @@
+:root {
+  --gold: #df9925;
+  --dark-bg: #1A1A1A; /* غيرت هنا */
+  --card-bg: #1f1f1f;
+  --light-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  --transition: all 0.3s ease;
+}
+
+
+.pd-main {
+  font-family: "Poppins", sans-serif;
+  color: #eee;
+  background: #1A1A1A; /* بدل var(--dark-bg) */
+  overflow-x: hidden;
+  padding-bottom: 80px;
+}
+
+/* الصورة الرئيسية fullscreen */
+.pd-main-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pd-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.8s ease;
+}
+
+.pd-main-image-wrapper:hover .pd-main-image {
+  transform: scale(1.05);
+}
+
+/* Overlay للنصوص */
+.pd-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-overlay-content {
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.pd-title {
+  font-size: 4rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.pd-slogan {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.pd-back-btn {
+  padding: 0.7rem 1.8rem;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.pd-back-btn:hover {
+  background: var(--gold);
+  color: #ffffff;
+}
+
+/* المحتوى بعد الصورة */
+.pd-content-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+
+/* صور المشروع الثانوية */
+.pd-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pd-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--light-shadow);
+}
+
+/* تفاصيل المشروع */
+.pd-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.pd-details-card,
+.pd-info-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1 1 45%;
+  box-shadow: var(--light-shadow);
+}
+
+.pd-details-card h2,
+.pd-info-card h2 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.pd-details-card p,
+.pd-info-card p{
+line-height: 2rem;
+}
+
+/* Features */
+.pd-extras {
+  text-align: center;
+}
+
+.pd-extras h3 {
+  color: var(--gold);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.pd-extras-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+}
+
+.pd-extra {
+  background: var(--card-bg);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: var(--light-shadow);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pd-details { flex-direction: column; align-items: center; }
+  .pd-details-card, .pd-info-card { width: 90%; }
+}
+
+@media (max-width: 700px) {
+  .pd-title { font-size: 2.5rem; }
+  .pd-slogan { font-size: 1rem; }
+  .pd-image { width: 90%; height: 180px; }
+}

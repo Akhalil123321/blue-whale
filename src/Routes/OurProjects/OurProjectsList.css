@@ -1,0 +1,130 @@
+/* Variables */
+:root {
+  --gold: #df9925;
+  --dark-bg: #262626;
+  --card-bg: #1f1f1f;
+}
+
+/* Section */
+.opl-section {
+  width: 100%;
+  padding: 100px 10% 80px; /* زودنا المارجين من فوق */
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin: 50px 0;
+}
+
+/* Title */
+.opl-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Container */
+.opl-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Card */
+.opl-card {
+  display: flex;
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.opl-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(223, 153, 37, 0.3);
+}
+
+/* Image */
+.opl-img-wrapper {
+  flex: 0 0 40%;
+  overflow: hidden;
+}
+
+.opl-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.opl-card:hover .opl-img {
+  transform: scale(1.07);
+}
+
+/* Content */
+.opl-content {
+  flex: 1;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.opl-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 8px; /* مسافة صغيرة أسفل الاسم */
+}
+
+.opl-slogan {
+  font-size: 1.2rem;
+  color: #e1e1e1;
+  line-height: 1.6;
+  margin-bottom: 6px; /* مسافة أسفل السطر الثاني */
+  font-style: italic;
+  font-weight: bold;
+}
+
+.opl-details {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-top: 0;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .opl-card {
+    flex-direction: column;
+  }
+  .opl-img-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 18rem;
+  }
+}
+@media (max-width: 768px) {
+  .opl-section {
+    padding: 80px 5%;
+  }
+  .opl-title {
+    font-size: 2.2rem;
+  }
+  .opl-name {
+    font-size: 1.5rem;
+  }
+  .opl-slogan {
+    font-size: 0.95rem;
+  }
+  .opl-details {
+    font-size: 0.9rem;
+  }
+}

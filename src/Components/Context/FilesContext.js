@@ -1,4 +1,4 @@
-import {React, createContext, useContext, useState } from 'react';
+import { React, createContext, useContext, useState } from 'react';
 
 const FilesContext = createContext();
 
@@ -10,8 +10,12 @@ export function FilesContextProvider({ children }) {
     setFirstFileData(data);
   };
 
-  const toggleInquiry = () => {
-    setInquiryActive(prevState => !prevState);
+  const toggleInquiry = (value) => {
+    if (typeof value === "boolean") {
+      setInquiryActive(value);
+    } else {
+      setInquiryActive(prev => !prev);
+    }
   };
 
   return (

@@ -24,7 +24,7 @@ const contactCards = [
     icon: <FaEnvelope />,
     title: "E-Mail",
     value: "info@bluewhaledevelopment.com",
-    link: "mailto:info@bluewhaledevelopment.com",
+    link: `mailto:info@bluewhaledevelopment.com?subject=Property Inquiry&body=Hi%20Bluewhale%20Team,%0D%0AI'm%20interested%20in%20getting%20more%20details%20about%20your%20projects.`,
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -38,7 +38,10 @@ const socials = [
   { icon: <FaFacebookF />, link: "#" },
   { icon: <FaLinkedinIn />, link: "#" },
   { icon: <FaInstagram />, link: "https://www.instagram.com" },
-  { icon: <FaWhatsapp />, link: "https://api.whatsapp.com/send?phone=971507890780" },
+  {
+    icon: <FaWhatsapp />,
+    link: "https://api.whatsapp.com/send?phone=971507890780",
+  },
   { icon: <FaYoutube />, link: "#" },
 ];
 
@@ -50,17 +53,21 @@ const scrollAnim = {
     filter: "blur(0px)",
     transition: {
       duration: 0.9,
+      ease: "easeOut",
     },
   },
 };
 
-
 const Contact = () => {
   const { toggleInquiry } = useFiles();
 
+  // CLICK ON CARD ANYWHERE
+  const handleCardClick = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <section className="contact-wrapper no-bg">
-
       {/* TITLE */}
       <motion.h2
         className="section-title"
@@ -78,6 +85,7 @@ const Contact = () => {
           <motion.div
             key={i}
             className="contact-card"
+            onClick={() => handleCardClick(card.link)}
             variants={scrollAnim}
             initial="hidden"
             whileInView="visible"
@@ -87,7 +95,12 @@ const Contact = () => {
             <div className="contact-icon">{card.icon}</div>
             <h3>{card.title}</h3>
 
-            <a href={card.link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={card.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               {card.value}
             </a>
           </motion.div>

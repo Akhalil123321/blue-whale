@@ -1,15 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../../Images/Logo Part 1.svg";
+import { useFiles } from "../Context/FilesContext";
 
 const NavBar = () => {
+  const { toggleInquiry } = useFiles();
+  const navigate = useNavigate();
   const [hoverLogo, setHoverLogo] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
 
-  // غلق القائمة عند الضغط خارجها
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -20,7 +23,6 @@ const NavBar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // مراقبة السّكروول لتغيير لون الخلفية
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= window.innerHeight) {
@@ -29,49 +31,57 @@ const NavBar = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
-      {/* اليسار */}
+      {/* LEFT */}
       <div
         className="nav-left"
         onMouseEnter={() => setHoverLogo(true)}
         onMouseLeave={() => setHoverLogo(false)}
+        onClick={() => navigate("/")}
+        style={{ cursor: "pointer" }}
       >
-        <div className="logo-wrapper">
-          <span className={`brand-text ${hoverLogo ? "hide" : ""}`}>
-            Blue Whale
-          </span>
-          <img
-            src={logo}
-            alt="Blue Whale Logo"
-            className={`brand-logo ${hoverLogo ? "show" : ""}`}
-          />
-        </div>
+      <div className={`brand-text brand-stack ${hoverLogo ? "hide" : ""}`}>
+        <span className="brand-ar">Blue Whale</span>
+        <span className="brand-en">REAL ESTATE</span>
+      </div>        <img
+          src={logo}
+          alt="Blue Whale Logo"
+          className={`brand-logo ${hoverLogo ? "show" : ""}`}
+        />
       </div>
 
-      {/* المنتصف */}
+      {/* CENTER */}
       <div className="nav-center" ref={menuRef}>
-        <div
-          className="menu-click-zone"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <div className="menu-label">Menu</div>
+        <div className="menu-click-zone" onClick={() => setMenuOpen(!menuOpen)}>
           <div className="menu-line"></div>
         </div>
         <div className={`dropdown-menu ${menuOpen ? "show" : ""}`}>
-          <a href="#">Home</a>
-          <a href="#">Projects</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/OurProjects" onClick={() => setMenuOpen(false)}>Projects</Link>
+          <Link to="/Main" onClick={() => setMenuOpen(false)}>About</Link>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              toggleInquiry(true);
+              setMenuOpen(false);
+            }}
+          >
+            Contact
+          </a>
         </div>
       </div>
 
-      {/* اليمين */}
-      <div className="nav-right">Contact</div>
+      {/* RIGHT */}
+      <div className="nav-right" onClick={() => toggleInquiry(true)}>
+        Contact
+      </div>
     </nav>
   );
 };

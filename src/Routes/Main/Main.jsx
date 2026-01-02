@@ -6,7 +6,6 @@ import Contact from "../../Components/8-Contact/Contact"
 import OurVision from "../../Components/5-OurVision/OurVision"
 import WhyChooseUs from "../../Components/4-Services/Services"
 import OurProjects from "../../Components/7-OurProjects/OurProjects"
-import Tail from "../../Components/9-Tail/Tail"
 
 const MainEn = () => {
     return (
@@ -18,7 +17,6 @@ const MainEn = () => {
             <OurProjects/>
             <ServicesSection/>
             <Contact/>
-            <Tail/>
         </div>
     )
 }

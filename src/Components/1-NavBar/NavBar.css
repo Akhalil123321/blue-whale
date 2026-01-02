@@ -16,30 +16,43 @@
 }
 
 .navbar.navbar-scrolled {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
-.nav-left,
-.nav-right {
+/* LEFT */
+.nav-left {
   width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-.logo-wrapper {
   position: relative;
-  width: 150px;
-  height: 60px;
+}
+.brand-stack {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  line-height: 1.1;
+}
+.brand-ar {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #DF9925;
+  letter-spacing: 1px;
 }
 
+.brand-en {
+  font-family: 'Audiowide', cursive;
+  font-size: 11px;
+  color: #DF9925;
+  letter-spacing: 2.5px;
+  margin-top: 4px;
+  opacity: 0.85;
+}
 .brand-text {
-  color: #df9925;
+  color: #DF9925;
   font-size: 22px;
   font-weight: 600;
   transition: all 0.5s ease;
@@ -64,18 +77,26 @@
   transform: scale(1) rotate(0deg);
 }
 
-/* ===== Center ===== */
+/* CENTER */
 .nav-center {
-  position: relative;
+  flex-direction: column;
   text-align: center;
+  position: relative;
+}
+
+.menu-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
 .menu-click-zone {
-  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  padding: 5px 0;
 }
 
 .menu-line {
@@ -84,21 +105,17 @@
   background-color: #ffffff;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .menu-click-zone:hover .menu-line {
-  background-color: #df9925;
+  background-color: #DF9925;
   transform: scaleX(1.1);
 }
 
-/* =============================== */
-/*     MODERN DROPDOWN STYLING     */
-/* =============================== */
-
+/* DROPDOWN */
 .dropdown-menu {
   position: absolute;
-  top: 65px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%) scale(0.8) rotateX(-35deg);
   background: rgba(0, 0, 0, 0.9);
@@ -110,14 +127,9 @@
   align-items: center;
   gap: 22px;
   min-width: 350px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-
   opacity: 0;
   pointer-events: none;
-
-  transition: 
-    opacity 0.35s ease,
-    transform 0.45s cubic-bezier(.18,.89,.32,1.28);
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(.18,.89,.32,1.28);
   transform-origin: top;
 }
 
@@ -127,64 +139,43 @@
   transform: translateX(-50%) scale(1) rotateX(0deg);
 }
 
-/* العناصر */
 .dropdown-menu a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-size: 19px;
   font-weight: 500;
-
-  opacity: 0;
-  transform: translateY(15px);
-
-  transition: 
-    transform 0.35s ease,
-    opacity 0.35s ease,
-    color 0.3s ease;
-}
-
-/* stagger delay */
-.dropdown-menu.show a:nth-child(1) { transition-delay: 0.05s; }
-.dropdown-menu.show a:nth-child(2) { transition-delay: 0.12s; }
-.dropdown-menu.show a:nth-child(3) { transition-delay: 0.18s; }
-.dropdown-menu.show a:nth-child(4) { transition-delay: 0.25s; }
-
-.dropdown-menu.show a {
-  opacity: 1;
-  transform: translateY(0px);
+  transition: color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-  color: #df9925;
-  transform: translateY(-3px) scale(1.05);
+  color: #DF9925;
 }
 
-/* Right button */
+/* RIGHT */
 .nav-right {
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
   font-size: 16px;
+  color: #ffffff;
   cursor: pointer;
   transition: color 0.3s ease;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .nav-right:hover {
-  color: #df9925;
+  color: #DF9925;
 }
 
-/* ========== Responsive ========== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 15px 30px;
+  .nav-left, .nav-right {
+    display: none;
   }
 
-  .nav-left,
-  .nav-right {
-    width: 130px;
-  }
-
-  .brand-text {
-    font-size: 18px;
+  .nav-center {
+    width: 100%;
   }
 
   .menu-line {
@@ -196,7 +187,8 @@
     padding: 30px 50px;
   }
 
-  .dropdown-menu a {
-    font-size: 16px;
+  .menu-label {
+    color: #ffffff;
+    margin-bottom: 8px;
   }
 }
