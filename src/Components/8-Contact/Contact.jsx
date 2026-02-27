@@ -17,8 +17,8 @@ const contactCards = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    value: "+971 2 442 1016",
-    link: "tel:+97124421016",
+    value: "+971 55 269 2200",
+    link: "tel:+971 55 269 2200",
   },
   {
     icon: <FaEnvelope />,
@@ -35,12 +35,12 @@ const contactCards = [
 ];
 
 const socials = [
-  { icon: <FaFacebookF />, link: "#" },
+  { icon: <FaFacebookF />, link: "https://www.facebook.com/share/1CJkY9E7gU/" },
   { icon: <FaLinkedinIn />, link: "#" },
-  { icon: <FaInstagram />, link: "https://www.instagram.com" },
+  { icon: <FaInstagram />, link: "https://www.instagram.com/blue_whale_real_estate?igsh=MWl3NXNrZHQ2NXFsZA==" },
   {
     icon: <FaWhatsapp />,
-    link: "https://api.whatsapp.com/send?phone=971507890780",
+    link: "https://api.whatsapp.com/send?phone=+971552692200",
   },
   { icon: <FaYoutube />, link: "#" },
 ];

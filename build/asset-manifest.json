@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c09ffe7.css",
-    "main.js": "/static/js/main.e3c80eaa.js",
+    "main.css": "/static/css/main.029fd4ce.css",
+    "main.js": "/static/js/main.5097e050.js",
     "static/media/BackgroundVid.mp4": "/static/media/BackgroundVid.28e3717a0ebcc841bd87.mp4",
-    "static/media/project3-cover.jpg": "/static/media/project3-cover.30ef4a2c9c1332375853.jpg",
-    "static/media/project2-cover.jpg": "/static/media/project2-cover.bc32281d2b4674ef3d49.jpg",
-    "static/media/project1-cover.jpg": "/static/media/project1-cover.1a4f611c3e1c01b5ee6c.jpg",
+    "static/media/avora2Cover.jpg": "/static/media/avora2Cover.30ef4a2c9c1332375853.jpg",
+    "static/media/theRoyalCover.jpg": "/static/media/theRoyalCover.bc32281d2b4674ef3d49.jpg",
+    "static/media/avora1Cover.jpg": "/static/media/avora1Cover.1a4f611c3e1c01b5ee6c.jpg",
     "static/media/AboutUSPic.jpg": "/static/media/AboutUSPic.716035fd42e2df118048.jpg",
     "static/media/BackgroundVidSnap.png": "/static/media/BackgroundVidSnap.06fdeb7ed9eabbd8155a.png",
-    "static/media/Project3Det3.jpg": "/static/media/Project3Det3.f2d8913020cacc088437.jpg",
-    "static/media/Project3Det2.jpg": "/static/media/Project3Det2.d5181485a02d622eed03.jpg",
+    "static/media/avora11.jpg": "/static/media/avora11.b9b95aba0ac7b002b965.jpg",
+    "static/media/theRoyal1.jpg": "/static/media/theRoyal1.0f5095575f43a17840ca.jpg",
+    "static/media/avora21.jpg": "/static/media/avora21.d0a5ee830ba7ad6fd47d.jpg",
     "static/media/Logo Part 1.svg": "/static/media/Logo Part 1.93df94765f9c403b19e6ff6271389719.svg",
-    "static/media/Project3Det1.jpg": "/static/media/Project3Det1.5c531a033d723dd09d28.jpg",
+    "static/media/avora13.jpg": "/static/media/avora13.ff722e4e6852bfa60437.jpg",
+    "static/media/avora22.jpg": "/static/media/avora22.5f042f44cf0b5eb2d501.jpg",
+    "static/media/avora12.jpg": "/static/media/avora12.a2ff6e738df94aedf34b.jpg",
+    "static/media/avora23.jpg": "/static/media/avora23.fb4039f140c360d0c286.jpg",
+    "static/media/theRoyal2.jpg": "/static/media/theRoyal2.8fefe8d0a12b7a2e430f.jpg",
+    "static/media/theRoyal3.jpg": "/static/media/theRoyal3.97e886f81ff41bbdc9bf.jpg",
     "index.html": "/index.html",
-    "main.2c09ffe7.css.map": "/static/css/main.2c09ffe7.css.map",
-    "main.e3c80eaa.js.map": "/static/js/main.e3c80eaa.js.map"
+    "main.029fd4ce.css.map": "/static/css/main.029fd4ce.css.map",
+    "main.5097e050.js.map": "/static/js/main.5097e050.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c09ffe7.css",
-    "static/js/main.e3c80eaa.js"
+    "static/css/main.029fd4ce.css",
+    "static/js/main.5097e050.js"
   ]
 }
